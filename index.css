@@ -72,6 +72,12 @@ body {
 
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        grid: auto-flow / repeat(6, 1fr);
+    }
+}
+
 /* GRID HEADER */
 
 header {
@@ -136,6 +142,12 @@ main .last-row h2 {
 main .last-row button {
     margin-top: 1.5rem;
     padding: 0.5rem 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+    main .last-row {
+        grid-column: span 4;
+    }
 }
 
 /* GRID MAIN CHECKOUT */
@@ -264,4 +276,30 @@ footer p {
 footer img {
     width: 1.1rem;
     margin: 0 0.15rem;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        justify-items: center;
+    }
+    footer>nav,
+    footer>address,
+    footer>section {
+        justify-self: center;
+    }
+    footer>nav {
+        grid-column: 2 / 3;
+        justify-self: left;
+    }
+    
+    footer>address {
+        grid-column: 3 / 5;
+        justify-self: right;
+    }
+    
+    footer>section {
+        grid-column: 2 / 5;
+        margin-top: 1.5rem;
+        justify-self: left;
+    }
 }
